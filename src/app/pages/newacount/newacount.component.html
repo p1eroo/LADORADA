@@ -1,0 +1,53 @@
+<form [formGroup]="newAccountForm" (ngSubmit)="crearCuenta()" class="form-container">
+    <h2>Crear tu cuenta</h2>
+  
+    <div class="form-group">
+      <label for="correoElectronico">Correo electrónico</label>
+      <input type="email" id="correoElectronico" formControlName="correoElectronico" required />
+    </div>
+  
+    <div class="form-group">
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena" formControlName="contrasena" required />
+    </div>
+  
+    <div class="form-group">
+      <label for="dni">DNI</label>
+      <input type="text" id="dni" formControlName="dni" required />
+    </div>
+  
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre" required />
+    </div>
+  
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" formControlName="apellido" required />
+    </div>
+  
+    <div class="form-group">
+      <label class="checkbox-label">
+        <input type="checkbox" formControlName="terminos" required />
+        He leído y acepto los términos y condiciones y políticas de privacidad.
+      </label>
+    </div>
+  
+    <div class="form-group">
+      <label class="checkbox-label">
+        <input type="checkbox" formControlName="autorizacion" />
+        Autorizo el tratamiento de mis datos para fines de prospección y promoción comercial.
+      </label>
+    </div>
+  
+    <div class="captcha-container">
+      <div class="captcha-checkbox">
+        <input type="checkbox" id="noSoyRobot" formControlName="noSoyRobot" />
+        <label for="noSoyRobot">No soy un robot</label>
+        <span class="robot-icon">🤖</span>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="!newAccountForm.valid">Crear cuenta</button>
+  </form>
+  

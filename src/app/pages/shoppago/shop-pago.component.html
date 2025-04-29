@@ -1,0 +1,59 @@
+<div class="grid grid-cols-3 gap-4 p-10">
+    <div class="col-span-1 bg-gray-100 p-4 rounded-xl shadow">
+      <h2 class="text-lg font-bold mb-4">CARRITO DETALLES DEL PAGO</h2>
+      <div>
+        <h3 class="font-semibold">Resumen de tu compra</h3>
+        <div class="mt-2">
+          <div class="flex justify-between"><span>PRODUCTO</span><span>SUBTOTAL</span></div>
+          <div class="flex justify-between"><span>FILETE DE BABY PAICHE</span><span>S/. 30.00</span></div>
+          <div class="flex justify-between mt-2"><span>SUBTOTAL</span><span>S/. 30.00</span></div>
+          <div class="flex justify-between mt-2"><span>ENVÍO</span><span>Introduce dirección</span></div>
+          <div class="flex justify-between font-bold mt-2"><span>TOTAL</span><span>S/. 30.00</span></div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h3 class="font-semibold mb-2">Factura</h3>
+        <input [(ngModel)]="ruc" type="text" placeholder="RUC" class="border p-1 w-full mb-2" />
+        <input [(ngModel)]="razonSocial" type="text" placeholder="RAZON SOCIAL" class="border p-1 w-full mb-2" />
+        <button (click)="guardarFactura()" class="bg-yellow-500 text-white px-4 py-2 rounded">Guardar</button>
+      </div>
+      <div class="mt-4">
+        <input type="checkbox" id="terms" />
+        <label for="terms" class="text-sm">Declaro que he leído y aceptado los términos y condiciones, y autorizo la política de privacidad</label>
+      </div>
+      <button (click)="pagar()" class="mt-4 bg-yellow-500 text-white w-full py-2 rounded">Pagar</button>
+      <div class="mt-4 text-sm">footer</div>
+    </div>
+  
+    <div class="col-span-1 bg-gray-100 p-4 rounded-xl shadow">
+      <h2 class="text-lg font-bold mb-4">Agregar Tarjeta</h2>
+      <div>
+        <h3 class="font-semibold">Tarjeta de crédito</h3>
+        <input [(ngModel)]="numeroTarjeta" type="text" placeholder="Número de tarjeta" class="border p-1 w-full mb-2" />
+        <input [(ngModel)]="expiracion" type="text" placeholder="Expiración" class="border p-1 w-1/2 mb-2 mr-2 inline-block" />
+        <input [(ngModel)]="ccv" type="text" placeholder="CCV" class="border p-1 w-1/2 mb-2 inline-block" />
+        <button (click)="agregarTarjeta()" class="bg-yellow-500 text-white px-4 py-2 rounded">Agregar</button>
+      </div>
+  
+      <div class="mt-6">
+        <h3 class="font-semibold">Cupon de descuento</h3>
+        <input [(ngModel)]="cupon" type="text" placeholder="Ingresa tu cupon de descuento" class="border p-1 w-full mb-2" />
+        <button (click)="aplicarCupon()" class="bg-yellow-500 text-white px-4 py-2 rounded">Agregar</button>
+      </div>
+    </div>
+  
+    <div class="col-span-1 bg-gray-100 p-4 rounded-xl shadow w-full">
+
+      <h2 class="text-lg font-bold mb-4">Otras opciones</h2>
+      <img src="./img/yapeplin.png"   class="w-24 h-24 mb-2 img-responsive-rounded" />
+      <div class="text-sm">
+        <p>1. Escanea el QR desde la APP YAPE</p>
+        <p>2. Verifica el monto</p>
+        <p>3. Confirma pago</p>
+      </div>
+      <div class="mt-4 flex items-start gap-2 text-sm">
+        <span class="text-2xl">✔️</span>
+        <p>Realiza el pago en los próximos 15 minutos. ¡Evita la cancelación de tu orden!</p>
+      </div>
+    </div>
+

@@ -1,0 +1,190 @@
+/* Estilos generales */
+body {
+  font-family: sans-serif; /* Fuente similar */
+  background-color: #f3f4f6; /* Gris claro de fondo */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  gap: 40px;
+  max-width: 960px;
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+.col-span-1 {
+  grid-column: span 1;
+}
+
+/* Estilos para el contenedor principal del carrito */
+.bg-gray-100 {
+  background-color: #f7f7f7; /* Gris claro para los contenedores */
+}
+
+.p-4 {
+  padding: 16px;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem; /* Bordes redondeados */
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Títulos */
+.text-lg {
+  font-size: 1.125rem; /* Tamaño de la fuente del título */
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* Resumen de compra */
+.font-semibold {
+  font-weight: 600;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Texto general */
+span {
+  font-size: 0.9rem; /* Tamaño de fuente general */
+  color: #4a5568; /* Color de texto gris */
+}
+
+/* Total */
+.mt-2.font-bold {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e0e0e0; /* Línea divisoria */
+  font-size: 1rem;
+  color: #2d3748; /* Color de texto más oscuro para el total */
+}
+
+/* Factura */
+.border {
+  border-width: 1px;
+  border-color: #cbd5e0;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Botones amarillos */
+.bg-yellow-500 {
+  background-color: #facc15;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+/* Términos y condiciones */
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* Footer */
+.mt-4.text-sm {
+  color: #718096;
+  text-align: left; /* Alineación a la izquierda como en la imagen */
+}
+
+/* Agregar Tarjeta */
+.w-1\/2 {
+  width: 50%;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* Otras opciones */
+.text-center {
+  text-align: center;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #48bb78; /* Color verde del checkmark */
+}
+
+/* Estilos para la imagen responsiva y redondeada */
+.img-responsive-rounded {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem; /* Equivalente a rounded-md en Tailwind */
+}
+.w-80 {
+  width: 20rem; /* 320px */
+}

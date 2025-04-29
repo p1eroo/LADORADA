@@ -1,0 +1,22 @@
+<div class="container my-4">
+  <h2 class="text-center mb-4">Carrito de Compras</h2>
+
+  <div *ngFor="let producto of productos" class="d-flex justify-content-between align-items-center mb-3 p-3 border rounded shadow-sm">
+    <div>
+      <h5>{{ producto.nombre }}</h5>
+      <p>Precio: ${{ producto.precio }}</p>
+    </div>
+
+    <div class="d-flex align-items-center">
+      <button class="btn btn-primary mx-2" (click)="agregarProducto(producto.id)">+</button>
+      <span class="mx-2">Cantidad: {{ producto.cantidad }}</span>
+      <button class="btn btn-danger mx-2" (click)="eliminarProducto(producto.id)">-</button>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center my-4">
+    <h4>Total: ${{ obtenerTotal() }}</h4>
+    <button *ngIf="productos.length > 0" class="btn btn-success">Finalizar Compra</button>
+  </div>
+  <a routerLink="/shop-pago">Ir a Pago</a>
+</div>

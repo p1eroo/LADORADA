@@ -1,0 +1,70 @@
+<div class="checkout-container">
+    <!-- Dirección -->
+    <div class="direccion-box">
+      <h3>Ingresa tu dirección</h3>
+      <form [formGroup]="addressForm">
+        <label>Departamento</label>
+        <input formControlName="departamento" placeholder="Lima" />
+  
+        <label>Provincia</label>
+        <input formControlName="provincia" placeholder="Lima" />
+  
+        <label>Distrito</label>
+        <input formControlName="distrito" placeholder="Miraflores" />
+  
+        <label>Avenida/Calle/Jirón</label>
+        <input formControlName="calle" placeholder="av/calle/jr" />
+  
+        <label>Número</label>
+        <input formControlName="numero" placeholder="9000000" />
+      </form>
+    </div>
+  
+    <!-- Resumen del pedido -->
+    <div class="pago-box">
+      <h3>CARRITO DETALLES DEL PAGO</h3>
+      <div class="resumen-box">
+        <h4>Resumen de tu compra</h4>
+        <div class="resumen-line">
+          <span>PRODUCTO</span>
+          <span>SUBTOTAL</span>
+        </div>
+        <div class="resumen-line">
+          <span>FILETE DE BABY PAICHE</span>
+          <span>S/. 30.00</span>
+        </div>
+        <div class="resumen-line">
+          <span>SUBTOTAL</span>
+          <span>S/. {{ subtotal.toFixed(2) }}</span>
+        </div>
+        <div class="resumen-line">
+          <span>ENVÍO</span>
+          <span>{{ addressForm.valid ? 'Gratis' : 'Introduce dirección' }}</span>
+        </div>
+        <div class="resumen-line total">
+          <span>TOTAL</span>
+          <span>S/. {{ total.toFixed(2) }}</span>
+        </div>
+  
+        <!-- Factura -->
+        <h4>Factura</h4>
+        <form [formGroup]="facturaForm">
+          <input formControlName="ruc" placeholder="RUC" />
+          <input formControlName="razonSocial" placeholder="RAZÓN SOCIAL" />
+        </form>
+  
+        <button class="btn-yellow" (click)="pagar()">Pagar</button>
+        <button class="btn-gray" (click)="guardar()">Guardar</button>
+  
+        <!-- Términos -->
+        <div class="terminos">
+          <input type="checkbox" [(ngModel)]="termsAccepted" />
+          <label>
+            Declaro que he leído y aceptado los términos y condiciones, y autorizo la política de privacidad
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

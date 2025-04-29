@@ -1,0 +1,152 @@
+/* Header como pie de página */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto; /* Empuja el logo a la izquierda */
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav {
+    color: #fff;
+    flex-grow: 1; /* Permite que la navegación ocupe el espacio central */
+    display: flex;
+    justify-content: flex-end; /* Centra los elementos de la lista */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px; /* Ajusta el margen para centrar los botones */
+    color: #000;
+}
+
+nav li a {
+    text-decoration: none;
+    color: inherit; /* Hereda el color definido en nav li */
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Empuja los iconos a la derecha */
+}
+
+.icons a {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 2em;
+    text-decoration: none;
+}
+/* Estilos para el footer (sin cambios) */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.footer-hours h3, .footer-contact h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+}
+
+.footer-hours p, .footer-contact p {
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 25px;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+}
+
+.footer-contact a.reclamaciones {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a.reclamaciones:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Apila los elementos verticalmente en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .nav {
+        margin-top: 20px;
+        justify-content: center; /* Centra los botones en pantallas pequeñas */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Apila los botones verticalmente en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .header-icons {
+        margin-top: 20px;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+}

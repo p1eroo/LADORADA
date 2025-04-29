@@ -1,0 +1,79 @@
+/* checkout.component.css */
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .direccion-box, .pago-box {
+    flex: 1 1 45%;
+    background-color: #d9d9d9;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .direccion-box h3,
+  .pago-box h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .resumen-box h4 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .resumen-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .total {
+    font-weight: bold;
+    border-top: 1px solid #aaa;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .btn-yellow {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .btn-gray {
+    background-color: #e0e0e0;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .terminos {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
